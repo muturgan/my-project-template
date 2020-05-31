@@ -27,6 +27,12 @@
     "arrow-parens": false,
     "prefer-conditional-expression": false,
     "prefer-for-of": false,
-    "quotemark": [true, "single", "jsx-double"]
+    "quotemark": [true, "single", "jsx-double"],
+    "semicolon": [true, "always"],
+    "curly": true,
+    "trailing-comma": [true, {"multiline": "always", "singleline": "never"}],
+    "array-type": [true, "array-simple"],
+    "no-submodule-imports": [true, "rxjs"],
+    "member-access": [true, "check-accessor", "check-parameter-property"]
   }
 }
