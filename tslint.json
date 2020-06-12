@@ -33,6 +33,7 @@
     "trailing-comma": [true, {"multiline": "always", "singleline": "never"}],
     "array-type": [true, "array-simple"],
     "no-submodule-imports": [true, "rxjs"],
+    "interface-name": [true, "always-prefix"],
     "member-access": [true, "check-accessor", "check-parameter-property"]
   }
 }
