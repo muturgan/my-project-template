@@ -1,5 +1,8 @@
 {
   "rules": {
+    "no-var-keyword": true,
+    "prefer-const": [true, {"destructuring": "all"}],
+    "typedef": [true, "call-signature", "parameter", "property-declaration"],
     "variable-name": {
       "options": [
         "allow-leading-underscore",
@@ -7,7 +10,30 @@
         "allow-pascal-case"
       ]
     },
-    "ordered-imports": [false],
+    "ordered-imports": [true, {
+      "grouped-imports": true,
+      "groups": [
+        {
+          "name": "npm packages",
+          "match": "^[^.]",
+          "order": 0
+        }, {
+          "name": "current folder",
+          "match": "^./",
+          "order": 2
+        }, {
+          "name": "upper folder",
+          "match": "^../",
+          "order": 3
+        }, {
+          "name": "twice upper folder",
+          "match": "^../../",
+          "order": 4
+        }
+      ],
+      "import-sources-order": "case-insensitive",
+      "named-imports-order": "case-insensitive"
+    }],
     "no-implicit-dependencies": false,
     "no-consecutive-blank-lines": false,
     "no-console": [true, "log"],
@@ -31,7 +57,7 @@
     "curly": true,
     "trailing-comma": [true, {"multiline": "always", "singleline": "never"}],
     "array-type": [true, "array-simple"],
-    "no-submodule-imports": [true, "rxjs"],
+    "no-submodule-imports": [true, "rxjs", "fs"],
     "interface-name": [true, "always-prefix"],
     "member-access": [true, "check-accessor", "check-parameter-property"]
   }
